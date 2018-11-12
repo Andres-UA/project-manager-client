@@ -17,7 +17,9 @@ import {
   Submenu,
   Dialog,
   InputNumber,
-  Alert
+  Alert,
+  Carousel,
+  CarouselItem
 } from 'element-ui'
 import lang from 'element-ui/lib/locale/lang/es'
 import locale from 'element-ui/lib/locale'
@@ -42,3 +44,5 @@ Vue.use(Submenu)
 Vue.use(Dialog)
 Vue.use(InputNumber)
 Vue.use(Alert)
+Vue.use(Carousel)
+Vue.use(CarouselItem)

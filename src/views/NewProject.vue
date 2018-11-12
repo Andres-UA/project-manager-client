@@ -58,6 +58,8 @@ export default {
     onSubmit () {
       if (this.form.name === '' || this.form.responsible === '' || this.form.description === '' || this.form.start_date === '' || this.form.end_date === '') {
         this.$snotify.error('Campos vacios', 'Error')
+      } else if (new Date(this.form.end_date) > new Date(this.form.start_date)) {
+        this.$snotify.error('Fecha de fin es mayor a fecha de inicio.', 'Error')
       } else {
         this.setProject(this.form)
         this.store()
