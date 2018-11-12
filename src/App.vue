@@ -1,29 +1,52 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <el-row :gutter="20">
+      <el-col :span="14" :offset="5">
+        <el-card>
+          <el-container>
+            <el-header>
+              <NavBar></NavBar>
+            </el-header>
+            <el-main>
+              <transition
+                name="router-anim"
+                enter-active-class="animated bounceInRight"
+                leave-active-class="animated bounceOutUp"
+              >
+                <router-view/>
+              </transition>
+            </el-main>
+            <el-footer>
+              <hr>
+              <p>Project Manager - por Andrés U. & Steven M.</p>
+            </el-footer>
+          </el-container>
+        </el-card>
+      </el-col>
+    </el-row>
+    <vue-snotify></vue-snotify>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import NavBar from '@/components/NavBar.vue'
+
+export default {
+  name: 'app',
+  components: {
+    NavBar
   }
 }
+</script>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css');
+  #app {
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+      Arial, sans-serif;
+  }
+  .pages {
+    position: fixed;
+    width: inherit;
+  }
 </style>
