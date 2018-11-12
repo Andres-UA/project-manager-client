@@ -12,7 +12,7 @@
     <el-menu-item v-if="isLoggedIn" route="/dashboard" index="4">Dashboard</el-menu-item>
     <el-submenu v-if="isLoggedIn" index="5">
       <template slot="title">User</template>
-      <el-menu-item index="6">Cerrar Sesión</el-menu-item>
+      <el-menu-item index>Cerrar Sesión</el-menu-item>
     </el-submenu>
   </el-menu>
 </template>
