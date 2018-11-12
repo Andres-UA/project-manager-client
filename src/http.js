@@ -3,7 +3,7 @@ import store from './store/'
 
 export default () => {
   return axios.create({
-    baseURL: 'http://localhost:3000/api/',
+    baseURL: 'https://project-manager-server-andres.herokuapp.com/api/',
     timeout: 5000,
     headers: {
       Authorization: `Bearer ${store.state.auth.token}`
