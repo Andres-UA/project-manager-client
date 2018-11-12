@@ -1,11 +1,5 @@
 <template>
-  <el-menu
-    :default-active="activeIndex"
-    class="el-menu-demo"
-    mode="horizontal"
-    router
-    @select="handleSelect"
-  >
+  <el-menu class="el-menu-demo" mode="horizontal" router @select="handleSelect">
     <el-menu-item v-if="!isLoggedIn" route="/" index="1">Inicio</el-menu-item>
     <el-menu-item v-if="!isLoggedIn" route="/register" index="2">Registrarse</el-menu-item>
     <el-menu-item v-if="!isLoggedIn" route="/login" index="3">Iniciar Sesión</el-menu-item>
