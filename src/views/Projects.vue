@@ -8,7 +8,7 @@
     </el-row>
     <el-row :gutter="20">
       <el-col :span="12" v-for="project in filterProjects" :key="project._id">
-        <el-card>
+        <el-card class="margin-bottom">
           <div slot="header" class="clearfix">
             <span>{{ project.name }}</span>
             <div
@@ -69,6 +69,9 @@ export default {
 </script>
 
 <style>
+  .margin-bottom {
+    margin-bottom: 20px;
+  }
   .red {
     background-color: brown !important;
   }

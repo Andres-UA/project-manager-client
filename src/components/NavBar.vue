@@ -6,7 +6,7 @@
     router
     @select="handleSelect"
   >
-    <el-menu-item route="/" index="1">Inicio</el-menu-item>
+    <el-menu-item v-if="!isLoggedIn" route="/" index="1">Inicio</el-menu-item>
     <el-menu-item v-if="!isLoggedIn" route="/register" index="2">Registrarse</el-menu-item>
     <el-menu-item v-if="!isLoggedIn" route="/login" index="3">Iniciar Sesión</el-menu-item>
     <el-menu-item v-if="isLoggedIn" route="/dashboard" index="4">Dashboard</el-menu-item>
